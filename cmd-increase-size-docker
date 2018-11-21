@@ -1,0 +1,1 @@
+docker-machine create --virtualbox-disk-size 150000 default
