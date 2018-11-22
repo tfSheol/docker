@@ -17,9 +17,9 @@ if [[ ! -z "$DOCKER_V" && ! -z "$DOCKER_COMPOSE_V" && ! -z "$DOCKER_MACHINE_V" ]
     echo "Docker-machine: $DOCKER_MACHINE_V"
     echo "========================================"
 
-    echo "Docker: $DOCKER_V" >> build/build.txt
-    echo "Docker-compose: v$DOCKER_COMPOSE_V" > build/build.txt
-    echo "Docker-machine: $DOCKER_MACHINE_V" > build/build.txt
+    echo "Docker: $DOCKER_V" > build/build.txt
+    echo "Docker-compose: v$DOCKER_COMPOSE_V" >> build/build.txt
+    echo "Docker-machine: $DOCKER_MACHINE_V" >> build/build.txt
 
     docker build --build-arg DOCKER_V=${DOCKER_V} -t "docker/docker-ce" .
 
